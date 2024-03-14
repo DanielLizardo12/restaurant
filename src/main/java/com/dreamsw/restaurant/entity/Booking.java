@@ -27,6 +27,4 @@ public class Booking {
   private Date date;
   private String time;
 
-
-
 }

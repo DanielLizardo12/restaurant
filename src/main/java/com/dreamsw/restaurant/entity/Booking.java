@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.util.Date;
+import java.time.LocalDateTime;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -16,6 +18,7 @@ import lombok.Data;
 
 @Entity
 @Data
+@Builder
 public class Booking {
 
   @Id
@@ -24,7 +27,6 @@ public class Booking {
 
   private String costumerName;
   private int tableSize;
-  private Date date;
-  private String time;
+  private LocalDateTime date;
 
 }

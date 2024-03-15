@@ -1,6 +1,7 @@
 package com.dreamsw.restaurant.controller;
 
 import com.dreamsw.restaurant.dto.BookTableDto;
+import com.dreamsw.restaurant.dto.BookingListDto;
 import com.dreamsw.restaurant.entity.Booking;
 import com.dreamsw.restaurant.service.BookingService;
 import java.time.LocalDate;
@@ -38,7 +39,7 @@ public class BookingController {
 
 
   @GetMapping("/books")
-  public ResponseEntity<List<Booking>> booksOfTheDay(@RequestParam("date") String date) {
+  public ResponseEntity<BookingListDto> booksOfTheDay(@RequestParam("date") String date) {
 
     LocalDate localDate =  LocalDate.parse(date, DateTimeFormatter.ISO_DATE);
 

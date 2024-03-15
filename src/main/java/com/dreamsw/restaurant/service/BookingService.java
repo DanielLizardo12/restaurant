@@ -1,6 +1,6 @@
 package com.dreamsw.restaurant.service;
 
-import com.dreamsw.restaurant.dto.ScheduleTableDto;
+import com.dreamsw.restaurant.dto.BookTableDto;
 import com.dreamsw.restaurant.entity.Booking;
 import com.dreamsw.restaurant.persistance.BookingRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,7 +19,7 @@ public class BookingService {
 
   private final BookingRepository repository;
 
-  public Booking saveBooking(ScheduleTableDto scheduleTableDto) {
+  public Booking saveBooking(BookTableDto scheduleTableDto) {
 
     Booking booking = Booking.builder()
         .costumerName(scheduleTableDto.getCostumerName())

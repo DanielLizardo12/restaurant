@@ -11,7 +11,7 @@ import lombok.Data;
  */
 
 @Data
-public class ScheduleTableDto {
+public class BookTableDto {
   private String costumerName;
   private int tableSize;
   private LocalDateTime date;

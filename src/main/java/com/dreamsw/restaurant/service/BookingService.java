@@ -3,6 +3,8 @@ package com.dreamsw.restaurant.service;
 import com.dreamsw.restaurant.dto.BookTableDto;
 import com.dreamsw.restaurant.entity.Booking;
 import com.dreamsw.restaurant.persistance.BookingRepository;
+import java.time.LocalDateTime;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +30,10 @@ public class BookingService {
         .build();
 
     return repository.save(booking);
+  }
+
+  public List<Booking> bookingsForTheDay(LocalDateTime startOfDay, LocalDateTime endOfDay) {
+    return repository.findByDateBetween(startOfDay, endOfDay);
   }
 
 }

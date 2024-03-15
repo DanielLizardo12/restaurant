@@ -1,7 +1,7 @@
 package com.dreamsw.restaurant.persistance;
 
 import com.dreamsw.restaurant.entity.Booking;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,6 +13,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface BookingRepository extends JpaRepository<Booking, Long> {
 
-  List<Booking> findByDate(Date date);
+  List<Booking> findByDateBetween(LocalDateTime startOfDay, LocalDateTime endOfDay);
 
 }
